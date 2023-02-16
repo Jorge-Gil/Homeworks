@@ -5,6 +5,9 @@ import "./index.css";
 import FirstApp from "./FirstApp";
 import Categorias from "./Categorias";
 import reportWebVitals from "./reportWebVitals";
+import AddCategory from "./AddCategory";
+import ComponentApp from "./ComponentApp";
+import GiftExpertApp from "./GiftExpertApp";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -18,7 +21,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <App /> */}
     <FirstApp value={0} />
-    <Categorias />
+    {/* <Categorias />  */}
+    <GiftExpertApp />
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
