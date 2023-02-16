@@ -22,6 +22,7 @@ const GifGrid = ({ category }) => {
     console.log(category);
   }, []);
 
+    getGifs(category);
   return (
     <>
       <h3> {category}</h3>
