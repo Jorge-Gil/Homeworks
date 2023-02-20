@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
+// import { getGifs } from "../helpers/getGifs";
 import { useState } from "react";
+import { GifItem } from "./GifItem";
 
 const getGifs = async (category) => {
   const url = `https://api.giphy.com/v1/gifs/search?api_key=Lqw9Rv7MajHLSgoLdOI8s8oQvJkkijt2&q=${category}&limit=25&offset=0&rating=pg-13&lang=en`;
@@ -17,43 +19,32 @@ const getGifs = async (category) => {
   return gifs;
 };
 
-const addImages = (images) => {
-  const img = images.map((img) => {
-    return (
-      <div>
-        <h2> {img.title}</h2>
-        <li key={img.id}>
-          <img src={img.url} alt={img.title} />
-        </li>
-      </div>
-    );
-  });
-  return img;
-};
-
 const GifGrid = ({ category }) => {
   const [images, setImages] = useState([]);
 
-  useEffect(() => {
-    getGifs(category).then((gifs) => setImages(gifs));
-    console.log(category);
-  }, [category]);
-
-  getGifs(category);
-
-  const Gifs = async () => {
-    const gifs = await getGifs(category);
-    setImages(gifs);
-    console.log(gifs);
+  const getImages = async () => {
+    const images = await getGifs(category);
+    setImages(images);
   };
-  Gifs.then((gifs) => setImages(gifs));
+  useEffect(() => {
+    getImages();
+    console.log(category);
+  }, []);
 
   return (
     <>
       <h3> {category}</h3>
-      <p>Hello world</p>
-      <ul>{addImages(images)}</ul>
-      <ul> {Gifs} </ul>
+      <div className="card-grid">
+        <h2> {images.title}</h2>
+        {images.map((image, key) => {
+          return (
+            <>
+              <h2> {image.title}</h2>
+              <GifItem key={key} {...image}></GifItem>
+            </>
+          );
+        })}
+      </div>
     </>
   );
 };
