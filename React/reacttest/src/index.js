@@ -8,6 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import AddCategory from "./AddCategory";
 import ComponentApp from "./ComponentApp";
 import GiftExpertApp from "./GiftExpertApp";
+import { MultipleCustomHooks } from "./MultipleCustomHooks";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -22,7 +23,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <App /> */}
     <FirstApp value={0} />
     {/* <Categorias />  */}
+    <MultipleCustomHooks />
     <GiftExpertApp />
+  
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
