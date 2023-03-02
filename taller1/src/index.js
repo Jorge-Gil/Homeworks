@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import CalcularHora from './components/CalcularHora';
+import Llamada from './components/Llamada';
+import Punto3 from './components/HoraNombre';
+import NumerosIguales from './components/NumerosIguales';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <CalcularHora />
+    <Llamada />
+    <Punto3 />
+    <NumerosIguales />
   </React.StrictMode>
 );
 
