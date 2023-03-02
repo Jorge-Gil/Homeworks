@@ -6,6 +6,9 @@ import CalcularHora from './components/CalcularHora';
 import Llamada from './components/Llamada';
 import Punto3 from './components/HoraNombre';
 import NumerosIguales from './components/NumerosIguales';
+import OrdenarNumeros from './components/OrdenarNumeros';
+import ImprimirImpares from './components/ImprimirImpares';
+import Salarios from './components/Salarios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +17,9 @@ root.render(
     <Llamada />
     <Punto3 />
     <NumerosIguales />
+    <OrdenarNumeros />
+    <ImprimirImpares />
+    <Salarios />
   </React.StrictMode>
 );
 
