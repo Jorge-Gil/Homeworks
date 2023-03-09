@@ -9,6 +9,9 @@ import AddCategory from "./AddCategory";
 import ComponentApp from "./ComponentApp";
 import GiftExpertApp from "./GiftExpertApp";
 import { MultipleCustomHooks } from "./MultipleCustomHooks";
+import { FocusScreen } from "./FocusScreen";
+import  {Memorize}  from "./Memorize";
+import { MemoHook } from "./MemoHook";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -24,6 +27,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <FirstApp value={0} />
     {/* <Categorias />  */}
     <MultipleCustomHooks />
+    <FocusScreen />
+    <Memorize />
+    <MemoHook />
     <GiftExpertApp />
   
   </React.StrictMode>

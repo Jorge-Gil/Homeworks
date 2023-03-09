@@ -4,7 +4,8 @@ import  GifGrid  from "./GifGrid";
 import { useState } from "react";
 
 const GiftExpertApp = () => {
-  const [categories, setCategories] = useState(["Dreamcatcher"]);
+  //Dentro del useState se puede poner algo que se quiera que se muestre por defecto
+  const [categories, setCategories] = useState([""]);
 
   const onAddCategory = (category) => {
     setCategories((list) => [...list, category]);
