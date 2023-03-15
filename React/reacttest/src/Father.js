@@ -9,7 +9,7 @@ export const Father = () => {
         setValor(valor + num)
     }
 
-    const memo = useMemo(() => increment(valor) , [valor])
+    // const memo = useMemo(() => increment(valor) , [valor])
 
 
 
@@ -21,7 +21,7 @@ export const Father = () => {
 
             {list.map((n, idx) => {
                 return (
-                    <Son key={idx} numero={n} increment={memo} />
+                    <Son key={idx} numero={n} increment={increment} />
                 )
             })}
 
