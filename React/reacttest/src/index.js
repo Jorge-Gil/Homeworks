@@ -12,6 +12,7 @@ import { MultipleCustomHooks } from "./MultipleCustomHooks";
 import { FocusScreen } from "./FocusScreen";
 import  {Memorize}  from "./Memorize";
 import { MemoHook } from "./MemoHook";
+import {Father} from "./Father";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <FocusScreen />
     <Memorize />
     <MemoHook />
+    <Father />
     <GiftExpertApp />
   
   </React.StrictMode>
