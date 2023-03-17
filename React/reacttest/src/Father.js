@@ -1,13 +1,14 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 import { Son } from './Son'
 
 export const Father = () => {
     const list = [2, 4, 6, 8, 10]
     const [valor, setValor] = useState(0)
 
-    const increment = (num) => {
+    const increment = useCallback((num) => {
         setValor(valor + num)
-    }
+    }, [setValor, valor])
+
 
     // const memo = useMemo(() => increment(valor) , [valor])
 
