@@ -13,6 +13,7 @@ import { FocusScreen } from "./FocusScreen";
 import  {Memorize}  from "./Memorize";
 import { MemoHook } from "./MemoHook";
 import {Father} from "./Father";
+import {TodoApp} from "./TodoApp";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Memorize />
     <MemoHook />
     <Father />
+    <TodoApp />
     <GiftExpertApp />
   
   </React.StrictMode>
