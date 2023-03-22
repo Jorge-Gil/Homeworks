@@ -22,7 +22,6 @@ export const TodoAdd = ({ handleAddTodo }) => {
         <input
           type="text"
           name="description"
-          placeholder="Aprender ..."
           autoComplete="off"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
