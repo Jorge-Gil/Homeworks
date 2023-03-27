@@ -96,12 +96,7 @@ function Header() {
                   Página 2
                 </NavLink>
 
-                <Link
-                  to="/Pagina2"
-                  className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  Pagina 2
-                </Link>
+               
               </div>
             </div>
           </div>

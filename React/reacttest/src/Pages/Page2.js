@@ -5,6 +5,7 @@ import { MemoHook } from '../MemoHook'
 import { Father } from '../Father'
 import { TodoApp } from '../TodoApp'
 import GiftExpertApp from "../GiftExpertApp";
+import { AppRedux } from '../AppRedux'
 
 
 function Page2() {
@@ -15,6 +16,7 @@ function Page2() {
     <MemoHook />
     <Father />
     <TodoApp />
+    <AppRedux />
     <GiftExpertApp />
     </>
   )
