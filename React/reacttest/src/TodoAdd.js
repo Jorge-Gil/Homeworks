@@ -21,6 +21,7 @@ export const TodoAdd = ({ handleAddTodo }) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          className="border border-gray-600 rounded-md p-2"
           name="description"
           autoComplete="off"
           value={newTodo}

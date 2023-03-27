@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter  } from 'react-router-dom';
 import "./index.css";
+import { AppRoutes } from "./Routes/AppRoutes";
 // import App from "./App";
 import FirstApp from "./FirstApp";
 import Categorias from "./Categorias";
@@ -25,16 +27,20 @@ import {TodoApp} from "./TodoApp";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <BrowserRouter>
+    <AppRoutes />
+
     {/* <App /> */}
-    <FirstApp value={0} />
+    {/* <FirstApp value={0} /> */}
     {/* <Categorias />  */}
-    <MultipleCustomHooks />
-    <FocusScreen />
-    <Memorize />
+    {/* <MultipleCustomHooks />
+    <FocusScreen /> */}
+    {/* <Memorize />
     <MemoHook />
     <Father />
     <TodoApp />
-    <GiftExpertApp />
+    <GiftExpertApp /> */}
+    </BrowserRouter>
   
   </React.StrictMode>
 );
