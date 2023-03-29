@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Form } from "react-router-dom";
 import "./index.css";
 import { AppRoutes } from "./Routes/AppRoutes";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import {Registro} from "./Registro";
 // import App from "./App";
 import FirstApp from "./FirstApp";
 import Categorias from "./Categorias";
@@ -32,7 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <BrowserRouter>
         <AppRoutes />
-
+  <Registro />
         {/* <App /> */}
         {/* <FirstApp value={0} /> */}
         {/* <Categorias />  */}
