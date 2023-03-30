@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <BrowserRouter>
         <AppRoutes />
-  <Registro />
+  
         {/* <App /> */}
         {/* <FirstApp value={0} /> */}
         {/* <Categorias />  */}

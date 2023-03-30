@@ -3,6 +3,9 @@ import NavComponent from '../NavComponent'
 import FirstApp from '../FirstApp'
 import { MultipleCustomHooks } from '../MultipleCustomHooks'
 import { FocusScreen } from '../FocusScreen'
+import { Registro } from '../Registro'
+import { Login } from '../Login'
+import { Upload } from '../Upload'
 
 function Page1() {
   return (
@@ -11,6 +14,9 @@ function Page1() {
     <FirstApp value={0} />
     <MultipleCustomHooks />
     <FocusScreen />
+    <Registro />
+    <Login />
+    <Upload />
     </>
   )
 }
