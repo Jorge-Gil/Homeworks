@@ -6,6 +6,7 @@ import { FocusScreen } from '../FocusScreen'
 import { Registro } from '../Registro'
 import { Login } from '../Login'
 import { Upload } from '../Upload'
+import { Crud } from '../Crud'
 
 function Page1() {
   return (
@@ -17,6 +18,7 @@ function Page1() {
     <Registro />
     <Login />
     <Upload />
+    <Crud />
     </>
   )
 }
