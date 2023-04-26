@@ -1,34 +1,51 @@
 const express = require("express");
 const { validationResult } = require("express-validator");
+const  Usuario  = require("../models/Usuario");
 
-const crearUsuario = (req, res = express.response) => {
+
+const crearUsuario = async (req, res = express.request) => {
   const { name, email, password } = req.body;
 
-  const userExists = users.find((user) => user.email === email);
-  if (userExists) {
-    return res.status(400).json({
+  try {
+    const usuario = new Usuario(req.body);
+    await usuario.save();
+    res.status(200).json({
+      ok: true,
+      usuario,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
       ok: false,
-      errors: {
-        email: {
-          msg: "Email is already in use",
-        },
-      },
+      error,
     });
   }
 
-  // Save user in memory
-  const newUser = {
-    name,
-    email,
-    password,
-  };
-  users.push(newUser);
+  // const userExists = users.find((user) => user.email === email);
+  // if (userExists) {
+  //   return res.status(400).json({
+  //     ok: false,
+  //     errors: {
+  //       email: {
+  //         msg: "Email is already in use",
+  //       },
+  //     },
+  //   });
+  // }
 
-  res.status(200).json({
-    ok: true,
-    name,
-    email,
-  });
+  // Save user in memory
+  // const newUser = {
+  //   name,
+  //   email,
+  //   password,
+  // };
+  // Usuario.push(newUser);
+
+  // res.status(200).json({
+  //   ok: true,
+  //   name,
+  //   email,
+  // });
 };
 
 const loginUsuario = (req, res = express.response) => {
