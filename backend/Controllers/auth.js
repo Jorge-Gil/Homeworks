@@ -2,6 +2,7 @@ const express = require("express");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const Usuario = require("../models/Usuario");
+const { generarJWT } = require("../helpers/jwt");
 
 const crearUsuario = async (req, res = express.request) => {
   const { name, email, password } = req.body;
@@ -77,9 +78,13 @@ const loginUsuario = async (req, res = express.request) => {
         msg: "Password incorrecto",
       });
     }
+
+    const token = await generarJWT(usuario.id, usuario.name);
+
     res.status(200).json({
       ok: true,
       usuario,
+      token,
     });
   } catch (error) {
     console.log(error);
@@ -90,9 +95,15 @@ const loginUsuario = async (req, res = express.request) => {
   }
 };
 
-const revalidarToken = (req, res = express.response) => {
+const revalidarToken = async (req, res = express.response) => {
+
+  const { uid, name } = req;
+
+  const token = await generarJWT(uid, name);
+
   res.json({
     ok: true,
+    token
   });
 };
 

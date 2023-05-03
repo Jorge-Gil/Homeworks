@@ -3,6 +3,7 @@ const router = express.Router();
 const {check} = require('express-validator');
 const { crearUsuario, loginUsuario, revalidarToken } = require('../Controllers/auth');
 const {validarCampos} = require('../middlewares/validar-campos');
+const { validarJWT } = require('../middlewares/validar-token');
 
 
 // router.post('/new', [
